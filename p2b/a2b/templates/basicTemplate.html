@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      nav {
+        background-color: lightblue;
+        padding: 15px;
+      }
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center align links horizontally */
+      }
+      nav li {
+        margin-right: 20px;
+        margin-bottom: 25px;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 0px 10px;
+        border-radius: 5px;
+        background-color: #555;
+      }
+      nav a:hover {
+        background-color: aqua;
+      }
+      h1 {
+        text-align: center;
+        background-color: blue;
+        color: yellow;
+        padding: 10px;
+        margin-top: 0; /* Remove default margin */
+      }
+      footer {
+        text-align: center;
+        margin-top: 20px;
+        padding: 10px;
+        background-color: lightblue;
+      }
+    </style>
+    <title>{% block title %} {% endblock %}</title>
+  </head>
+  <body>
+    <h1>STUDENT COURSE REGISTRATION PORTAL</h1>
+    <nav>
+      <ul>
+        <li><a href="/home/">HOME</a></li>
+        <li><a href="/studentlist/">STUDENT LIST</a></li>
+        <li><a href="/courselist/">COURSE LIST</a></li>
+        <li><a href="/register/">REGISTER</a></li>
+        <li><a href="/enrolledlist/">ENROLLED LIST</a></li>
+        <li><a href="/addproject/">ADD PROJECT</a></li>
+        <li>
+          <a href="/genericlistviewstudent/">GENERIC STUDENT LIST VIEW</a>
+        </li>
+        <li>
+          <a href="/download_course_table_as_csv/">DOWNLOAD COURSE AS CSV</a>
+        </li>
+        <li>
+          <a href="/download_course_table_as_pdf/">DOWNLOAD COURSE AS PDF</a>
+        </li>
+      </ul>
+    </nav>
+    <section>{% block content %} {% endblock %}</section>
+    <footer>
+      <hr />
+      &copy; Designed and Developed by RNSIT. of CSE, Bangalore-04
+    </footer>
+  </body>
+</html>
